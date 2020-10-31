@@ -1,10 +1,12 @@
 package com.example.flowershop;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.DialogFragment;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -113,6 +115,27 @@ public class OrderActivity extends AppCompatActivity  implements AdapterView.OnI
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
+
+    public void showDialog(View v){
+        AlertDialog.Builder adb = new AlertDialog.Builder(this);
+        adb.setTitle("คุณต้องการเคลียร์ข้อมูลทิ้งใช้หรือไหม");
+        adb.setMessage("ถ้าหากกดปุ่ม OK จะทำการเคลียร์ข้อมูลทิ้ง");
+        adb.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(getApplicationContext(),"You pressed OK",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        adb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Toast.makeText(getApplicationContext(),"You pressed CANCEL",Toast.LENGTH_SHORT).show();
+            }
+        });
+        adb.show();
 
     }
 
