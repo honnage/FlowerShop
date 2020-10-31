@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/idMenuOrder"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:title="Order"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/idMenuStatus"
+        android:icon="@drawable/ic_status"
+        android:title="Status"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/idMenuFavorites"
+        android:icon="@drawable/ic_favorites"
+        android:title="Favorites"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/idMenuContact"
+        android:title="Contact" />
+</menu>
